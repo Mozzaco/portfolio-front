@@ -1,0 +1,11 @@
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.p {
+  max-width: 80ch;
+}
