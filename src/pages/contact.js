@@ -1,7 +1,13 @@
+import Link from 'next/link';
+import s from './contact.module.css';
+
 function Contact() {
   return (
-    <div>
-      <form>
+    <div className={s.container}>
+      <Link href="/">
+        <li>Homepage</li>
+      </Link>
+      <form className={s.form}>
         <label>
           Firstname:
           <input type="text" name="name" id="name" required />

@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Link from 'next/link';
 import styles from './index.module.css';
 import AboutMe from '../components/AboutMe/AboutMe';
 import Projects from '../components/Projects/Projects';
@@ -11,6 +12,9 @@ function HomePage() {
       </section>
       <AboutMe />
       <Projects />
+      <Link href="/contact">
+        <button type="button">Contact Me</button>
+      </Link>
     </div>
   );
 }
