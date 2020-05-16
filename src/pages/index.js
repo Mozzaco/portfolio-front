@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import styles from './index.module.css';
 import AboutMe from '../components/AboutMe/AboutMe';
+import Projects from '../components/Projects/Projects';
 
 function HomePage() {
   return (
@@ -9,6 +10,7 @@ function HomePage() {
         <h1>Hi, I'm Antoine. Fullstack developer</h1>
       </section>
       <AboutMe />
+      <Projects />
     </div>
   );
 }

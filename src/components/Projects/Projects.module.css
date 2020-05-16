@@ -1,0 +1,17 @@
+.img {
+  width: 100%;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info__hidden {
+  display: none;
+}
+
+.info {
+  display: block;
+}
