@@ -5,25 +5,22 @@ function Contact() {
   return (
     <div className={s.container}>
       <Link href="/">
-        <li>Homepage</li>
+        <span className={s.close}>X</span>
       </Link>
       <form className={s.form}>
-        <label>
-          Firstname:
-          <input type="text" name="name" id="name" required />
+        <label htmlFor="name">
+          Name
+          <input type="text" name="name" id="name" required className={s.input} />
         </label>
-        <label>
-          Lastname:
-          <input type="text" name="name" id="name" required />
+        <label htmlFor="email">
+          Email
+          <input type="email" name="email" id="email" required className={s.input} />
         </label>
-        <label>
-          Email:
-          <input type="email" name="email" id="email" required />
+        <label htmlFor="message">
+          Message
+          <textarea className={s.textarea} />
         </label>
-        <label>
-          Message:
-          <textarea />
-        </label>
+        <input type="submit" value="Send" className={s.submitButton} />
       </form>
     </div>
   );
