@@ -7,23 +7,28 @@ import s from './Projects.module.css';
 
 function Projects({ projects }) {
   const [displayInfo, setDisplayInfo] = useState(false);
+  const [currentId, setCurrentId] = useState(null);
 
-  const handleInfo = () => {
+  const handleInfo = (id) => () => {
     setDisplayInfo(!displayInfo);
+    setCurrentId(id);
   };
 
   return (
     <div className={s.projects}>
       <h2>My recent works</h2>
-      {projects.map((project, index) => {
+      {projects.map((project) => {
         const { title } = project;
         const { mockup } = project;
         const { description } = project;
+        const { id } = project;
         return (
-          <article key={`${title}.${index}`}>
-            <img className={s.img} src={mockup} alt="blueHorizon-project" onClick={handleInfo} />
-            <h2>{title}</h2>
-            <p className={cx(displayInfo ? s.info : s.info__hidden)}>{description}</p>
+          <article key={id}>
+            <img className={s.img} src={mockup} alt={`${title}-project`} onClick={handleInfo(id)} />
+            <div className={cx(displayInfo && currentId === id ? s.info : s.info__hidden)}>
+              <h2>{title}</h2>
+              <p>{description}</p>
+            </div>
           </article>
         );
       })}
